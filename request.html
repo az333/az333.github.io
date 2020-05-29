@@ -72,6 +72,16 @@
 		results.innerHTML = resultString;
 	}
 
+	function yesno(){ 
+		console.log('help')
+		 var yes = document.getElementById("yes");
+         document.getElementById("emps").style.display = yes.checked ? "block" : "none";
+         document.getElementById("empslabel").style.display = yes.checked ? "block" : "none";
+         document.getElementById("nonemps").style.display = yes.checked ? "none" : "block";
+         document.getElementById("nonempslabel").style.display = yes.checked ? "none" : "block";
+           
+	}
+
 	</script>
 
 
@@ -116,18 +126,19 @@
 	<textarea id="request" name="request" style="font-size: 16px; font-family: 'Open Sans';" placeholder="Please specify the world/dungeon and the number of runs."></textarea>
 	<br><br>
 
-	<label for="price"> How much will you be paying? </label>
-	<input type="number" id="price" name="price" min="1">
-	<br> <br>
-
 	Will you be paying in empowers?<br>
-	<input type="radio" name="fictional_or_not" id="fictional" value="fictional">
-	<label for="fictional">Yes</label><br>
+	<input type="radio" name="yesorno" id="yes" value="" onclick="yesno()">
+	<label for="yes">Yes</label><br>
 
-	<input type="radio" name="fictional_or_not" id="not_fictional" value="not fictional">
-	<label for="not_fictional">No</label>
+	<input type="radio" name="yesorno" id="no" value="not" onclick="yesno()">
+	<label for="no">No</label>
 
-	<br> <br>
+	<label for="emps" style="display:none;" id="empslabel"> If yes, indicate how many </label>
+	<input type="number" id="emps" name="emps" min="1" style="display:none;" >
+	<br> 	
+	<label for="nonemps" style="display:none;" id="nonempslabel"> If no, indicate an equivalent payment </label>
+	<input type="text" id="nonemps" name="nonemps" min="1" style="display:none;">
+	<br>
 
 	Which genres is this movie?<br>
 	<input type="checkbox" name="genre" value="action" id="action">  		<label for="action">Action</label><br>
