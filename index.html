@@ -10,7 +10,108 @@
 <body>
 
 
-<h1>hello world</h1>
+
+	<!-- Navbar (sit on top) -->
+	<div class="w3-top">
+	  <div class="w3-bar" id="myNavbar">
+	    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+	      <i class="fa fa-bars"></i>
+	    </a>
+	    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+	    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+	    <a href="#MercenaryPrices" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Mercenary Prices</a>
+	    <a href="#AvailableWizards" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>Available Wizards</a>
+	    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+	      <i class="fa fa-search"></i>
+	    </a>
+	  </div>
+
+	  <!-- Navbar on small screens -->
+	  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+	    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+	    <a href="#MercenaryPrices" class="w3-bar-item w3-button" onclick="toggleFunction()">Mercenary Prices</a>
+	    <a href="#AvailableWizards" class="w3-bar-item w3-button" onclick="toggleFunction()">Available Wizards</a>
+	    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+	  </div>
+	</div>
+
+	<!-- First Parallax Image with Logo Text -->
+	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+	  <div class="w3-display-middle" style="white-space:nowrap;">
+	    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WANGEROVICH
+	  </div>
+	</div>
+
+	<!-- Container (About Section) -->
+	<div class="w3-content w3-container w3-padding-64" id="about">
+	  <h3 class="w3-center">ABOUT US</h3>
+	  <p class="w3-center"><em>we carry u</em></p>
+	  <p>We wizards pew pew. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+	    qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	  <div class="w3-row">
+	    <div class="w3-col m6 w3-center w3-padding-large">
+	      <p><b><i class="fa fa-user w3-margin-right"></i>My Name</b></p><br>
+	      <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+	    </div>
+
+	    <!-- Hide this text on small devices -->
+	    <div class="w3-col m6 w3-hide-small w3-padding-large">
+	      <p>Welcome to my website. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+	        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor
+	        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+	    </div>
+	  </div>
+	</div>
+
+
+
+
+
+	<!-- Third Parallax Image with Portfolio Text -->
+	<div class="bgimg-3 w3-display-container w3-opacity-min">
+	  <div class="w3-display-middle">
+	     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+	  </div>
+	</div>
+
+	<!-- Container (Contact Section) -->
+	<div class="w3-content w3-container w3-padding-64" id="contact">
+	  <h3 class="w3-center">WHERE I WORK</h3>
+
+
+	  <div class="w3-row w3-padding-32 w3-section">
+	    <div class="w3-col m4 w3-container">
+	      <img src="/w3images/map.jpg" class="w3-image w3-round" style="width:100%">
+	    </div>
+	    <div class="w3-col m8 w3-panel">
+	      <div class="w3-large w3-margin-bottom">
+	        <i class="fab fa-discord"></i> Discord: Cypher#8744 <br>
+	      </div>
+	      <p>Leave me a note:</p>
+	      <form action="/action_page.php" target="_blank">
+	        <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+	          <div class="w3-half">
+	            <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+	          </div>
+	          <div class="w3-half">
+	            <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+	          </div>
+	        </div>
+	        <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+	        <button class="w3-button w3-black w3-right w3-section" type="submit">
+	          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+	        </button>
+	      </form>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+	  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+	  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+	</footer>
 </body>
 
 
