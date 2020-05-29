@@ -37,11 +37,17 @@
 		e.preventDefault();
 
 		var resultString = '';
-		var movie_name = document.getElementById("movie_name").value;
-		resultString += "Your favorite movie is " + movie_name;
+		var name = document.getElementById("name").value;
+		resultString += "Your name is " + name;
 
-		var movie_description = document.getElementById("movie_description").value;
-		resultString += "<br><br>This movie is about " + movie_description;
+		var contact = document.getElementById("contact").value;
+		resultString += "<br><br>We can contact you at " + contact;
+
+		var request = document.getElementById("request").value;
+		resultString += "<br><br>Your request is " + request;
+
+		var price = document.getElementById("price").value;
+		resultString += "<br><br>You will pay " + price + " empowers";
 
 		if (document.querySelector('input[name="fictional_or_not"]:checked')) {
 			var fictional = document.querySelector('input[name="fictional_or_not"]:checked').value
@@ -98,20 +104,21 @@
 
 	<h1>What do you need help with?</h1>
 	<form> 
-	<label for="movie_name"> Your Name </label> <br>
+	<label for="name"> Your Name </label> <br>
 	<input type="text" id="name" name="name"> 
 
 	<br><br>
-	<label for="movie_name"> How can we contact you? (discord or email) </label> <br>
+	<label for="contact"> How can we contact you? (discord or email) </label> <br>
 	<input type="text" id="contact" name="contact"> 
 	<br><br>
 
-	<label for="movie_description">What is your request?</label><br>
-	<textarea id="movie_description" name="movie_description" ></textarea>
+	<label for="request">What is your request?</label><br>
+	<textarea id="request" name="request" ></textarea>
 	<br><br>
 
 	<label for="price"> How much will you be paying? </label>
-	<input type="number" id="quantity" name="quantity" min="1">
+	<input type="number" id="price" name="price" min="1"> 
+	<br> <br>
 
 	Will you be paying in empowers?<br>
 	<input type="radio" name="fictional_or_not" id="fictional" value="fictional"> 
