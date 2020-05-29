@@ -1,0 +1,67 @@
+<html>
+<head>
+	<style>
+
+		.nav{
+			background-color: lightgray;
+			text-align: center;
+			font-size: 40px;
+			position: fixed;
+			width:100%;
+			padding:10px;
+			top: 0;
+			left: 0;
+			right: 0;
+
+		}
+
+		.nav a{
+			color: black;
+			text-decoration: none;
+		}
+
+		.container{
+			border: solid black 10px;
+			padding: 50px;
+			margin: 10px;
+			margin-top: 100px;
+			border-radius:100px;
+		}
+	</style>
+</head>
+<body >
+
+
+	<div class="nav"> 
+		<a href="index.html"> Home </a> |
+		<a href="table.html"> Table </a> |
+		<a href="list.html"> List </a> |
+		<a href="box_inception.html"> Box </a> |
+		<a href="youtube_clone.html"> Youtube </a> |
+		<a href="madlibs.html"> MadLibs </a> |
+		<a href="weather.html"> Weather </a>
+	</div>
+
+	<h1> My Mad Lib </h1>
+	<div id='madlib'>
+	</div>
+
+	<script language="Javascript" type="text/javascript"> 
+		 window.onload = function mad() {
+			var name = prompt("Enter a name.")
+			var feeling = prompt("Enter a feeling/emotion.")
+			var topping1 = prompt("Enter a pizza topping (plural).")
+			var topping2 = prompt("Enter another pizza topping (plural).")
+			var number = prompt("Enter a number between 100 and 1000.")
+
+			var madlib = "Yesterday, " + name + " and I were feeling " + feeling + ", so we decided to make the world's largest pizza. It had extra " + topping1 + " and " + topping2 + ". It ended up being " + number + " inches wide!! We shared it with the whole school. Yummy!"
+			console.log(madlib)
+			var container = document.getElementById("madlib")
+			container.innerHTML = madlib
+		}
+		
+	</script>
+
+</body>
+
+</html>

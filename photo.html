@@ -1,0 +1,56 @@
+<html>
+	
+<head>
+	<style>
+
+		body{
+			text-align: center;
+		}
+
+		button{
+			font-family: 'Open Sans';
+			outline: none;
+			cursor: pointer;
+			font-size: 18px;
+			width:150px;
+			height:50px;
+			margin-bottom: 50px;
+
+		}
+
+		img{
+			width:300px;
+			display: inline-block;
+			margin:10px;
+			border: 1px solid black;
+
+		}
+
+
+	</style>
+</head>
+
+<body>
+	<script>
+		var url = prompt("Enter the url of your photo")
+		function photo(){
+			var img = document.createElement("img")
+			img.setAttribute("src",url)
+			var r = Math.floor(Math.random() * 256);
+			var g = Math.floor(Math.random() * 256);
+			var b = Math.floor(Math.random() * 256);
+			img.style.borderColor = "rgb(" + r.toString() + "," + g.toString() + "," + b.toString() + ")";
+			img.style.borderWidth = "5px"
+			img.style.borderStyle = "solid"
+			container = document.getElementById("cont")
+			container.appendChild(img)
+		}
+
+	</script>
+
+	<button id='btn' onclick="photo()"> Click me to clone photo! </button>
+
+	<div id="cont"> </div>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<html>
+<head>
+	<style>
+
+		body{
+			margin: 0px;
+			background: rgb(241,241,241);
+			font-family: Arial;
+		}
+
+		#logo{
+			width:150px;
+		}
+
+		#avatar{
+			width: 50px;
+			position: absolute;
+			right: 60px;
+			top: 85px;
+			cursor: pointer;
+
+		}
+
+		
+		.sidebar{
+			padding: 190px 10px 10px 10px;
+			position:fixed;
+			height: 100%;
+			border-right: 1px solid #EFEFEF;
+			background: #FFF;
+		}
+
+		.sidebar-item {
+			padding: 8px 50px 8px 20px;
+			font-size: 20px;
+			cursor: pointer;
+		}
+
+		.sidebar-item:hover {
+			background: #666;
+			color: #FFF;
+		}
+
+		.sidebar-item-selected {
+			background: rgb(221,40,40);
+			color: #FFF;
+		}
+		
+		.container{
+			padding-top: 100px;
+			padding-left: 200px;
+			padding-bottom: 50px;
+		}
+
+		.container-videos {
+			width: 90%;
+			background: #FFF;
+			margin: 20px auto;
+			padding: 80px;
+			position:relative;
+		}
+
+		.title {
+			font-size: 15px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		iframe {
+			margin: 10px;
+		}
+
+		.nav{
+			background-color: lightgray;
+			text-align: center;
+			font-size: 40px;
+			width:100%;
+			padding:10px;
+			top: 0;
+			left: 0;
+			right: 0;
+		}
+
+		.nav a{
+			color: black;
+			text-decoration: none;
+		}
+
+		.totalnav{
+			position:fixed;
+			border-bottom: 1px solid #EFEFEF;
+			padding: 5px 15px;
+			width: 100%;
+			z-index: 100;
+			background: #FFF;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="totalnav">
+		<div class="nav"> 
+			<a href="index.html"> Home </a> |
+			<a href="table.html"> Table </a> |
+			<a href="list.html"> List </a> |
+			<a href="box_inception.html"> Box </a> |
+			<a href="youtube_clone.html"> Youtube </a> |
+			<a href="madlibs.html"> MadLibs </a> |
+		<a href="weather.html"> Weather </a>
+		</div>
+
+		<div class="navyt">
+			<img id="logo" src="youtube_logo.jpg.png">
+			<img id="avatar" src="youtube_avatar.jpg.png">
+		</div>
+	</div>
+	
+	<div class="sidebar">
+		<div class="sidebar-item sidebar-item-selected">Home</div>
+		<div class="sidebar-item">My channel</div>
+		<div class="sidebar-item">Trending</div>
+		<div class="sidebar-item">Subscriptions</div>
+	</div>
+		
+	<div class="container">
+		<div class="container-videos">
+				<div class="title">Recommended</div>
+				<iframe src="https://www.youtube.com/embed/hb8WDATVB6A" frameborder="0" allowfullscreen></iframe>
+				<iframe src="https://www.youtube.com/embed/svzh2IcajQw" frameborder="0" allowfullscreen></iframe>
+				<iframe src="https://www.youtube.com/embed/Ud8j5GaqH3c" frameborder="0" allowfullscreen></iframe>
+				<iframe src="https://www.youtube.com/embed/euz-KBBfAAo" frameborder="0" allowfullscreen></iframe>
+				<iframe src="https://www.youtube.com/embed/cT4ghbuctZ0" frameborder="0" allowfullscreen></iframe>
+				<iframe src="https://www.youtube.com/embed/1_2HurMbwLA" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class="container-videos">
+			<div class="title">Tasty</div>
+			<iframe src="https://www.youtube.com/embed/zMBGwpEnRWM" frameborder="0" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/A_6CTltXqPU" frameborder="0" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/vvR1pde64ZA" frameborder="0" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/lIb_741_dIw" frameborder="0" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/6Ire17yjpQ8" frameborder="0" allowfullscreen></iframe>
+			<iframe src="https://www.youtube.com/embed/3waJFsEGzGk" frameborder="0" allowfullscreen></iframe>
+		</div>
+	
+	</div>
+	
+</body>
+
+</html>

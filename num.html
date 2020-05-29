@@ -1,0 +1,35 @@
+<html>
+<head>
+	
+</head>
+<body>
+
+	<script type="text/javascript"> 
+		alert("This is a number guessing game! Try to guess the right number between 0 and 99.");
+		var guessedAnswer = -1;
+		var correctAnswer = Math.floor(Math.random() * 100);
+		var guessesRemaining = 10;
+
+		while(correctAnswer != guessedAnswer) {
+			guessedAnswer = prompt("What number do you guess?");
+			guessesRemaining--;
+			if (guessedAnswer === null) {
+        		break;
+    		} else if (guessedAnswer == correctAnswer) {
+    			alert("You win!")
+    		} else if (guessesRemaining == 0) {
+    			alert("Out of guesses! You lose!")
+    			guessesRemaining = 5;
+    			break;
+    		} else if (guessedAnswer > correctAnswer) {
+				alert("Too high! You have " + guessesRemaining + " guesses remaining.");
+			} else if (guessedAnswer < correctAnswer) {
+				alert("Too low! You have " + guessesRemaining + " guesses remaining.");
+			}
+		}
+	</script>
+
+	
+</body>
+
+</html>

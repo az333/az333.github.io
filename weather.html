@@ -1,0 +1,103 @@
+<html>
+<head>
+	<style>
+
+		body {
+			font-family: 'Open Sans';
+			text-align: center;
+			font-weight: 300;
+		}
+
+		h1 {
+			font-weight: 400;
+			margin: 30px 0px;
+		}
+
+		img{
+			width:200px;
+		}
+
+		.nav{
+			background-color: lightgray;
+			text-align: center;
+			font-size: 40px;
+			position: fixed;
+			width:100%;
+			padding:10px;
+			top: 0;
+			left: 0;
+			right: 0;
+
+		}
+
+		.nav a{
+			color: black;
+			text-decoration: none;
+		}
+
+		.container{
+			border: solid black 10px;
+			padding: 50px;
+			margin: 10px;
+			margin-top: 100px;
+			border-radius:100px;
+		}
+
+		button {
+			background-color: #4286f4;
+			padding: 5px 10px;
+			font-family: 'Open Sans';
+			color: #FFF;
+			border: 0px;
+			outline: none;
+			cursor: pointer;
+		}
+
+		#output {
+			font-size: 30px;
+			margin-top: 20px;
+		}
+
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function getItems() {
+			var input = document.getElementById("input").value
+			var output = ""
+			if (input == 'hot') {
+				output = 'Sunglasses!<br><img src="https://cdn.shopify.com/s/files/1/0377/2037/products/Runaway_-_Matte_Black_large.jpg?v=1501533583">'
+			} else if (input == 'cold') {
+				output = 'Jacket!<br><img src="http://assets.academy.com/mgen/45/10763345.jpg">'
+			} else if (input == 'rain') {
+				output = 'Umbrella!<br><img src="https://cdn.shopify.com/s/files/1/0227/0033/products/Davek_Traveler_Umbrella_Red.jpg?v=1493407543">'
+			} else {
+				output = "I'm not sure!"
+			}
+			console.log(output)
+			document.getElementById("output").innerHTML = output;
+		}
+
+	</script>
+
+	<div class="nav"> 
+		<a href="index.html"> Home </a> |
+		<a href="table.html"> Table </a> |
+		<a href="list.html"> List </a> |
+		<a href="box_inception.html"> Box </a> |
+		<a href="youtube_clone.html"> Youtube </a> |
+		<a href="madlibs.html"> MadLibs </a> |
+		<a href="weather.html"> Weather </a>
+	</div>
+
+	<h1>What do I need to bring today?</h1>
+	Type in the weather:
+	<input id="input"></input>
+	<button id="button" onclick="getItems()">Submit</button>
+	<br /><br />This is what you need to bring:
+	<div id="output"></div>
+
+
+</body>
+
+</html>

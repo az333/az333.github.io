@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<style>
+
+	body {
+				text-align: center;
+				font-family: 'Open Sans';
+				font-weight: 300;
+				margin: 30px;
+				font-size: 20px;
+			}
+
+	#results {
+				margin-top: 20px;
+				background: #EFEFEF;
+			}
+
+	form, #results {
+				text-align: left;
+				border: 1px solid #333;
+				border-radius: 5px;
+				padding: 30px;
+				display: inline-block;
+			}
+	
+			input[type="text"], textarea {
+				border: 1px solid #333;
+				border-radius: 2px;
+				padding: 3px 7px;
+				font-family: 'Open Sans';
+				width: 400px;
+				margin-top: 5px;
+			}
+
+			input[type="radio"], input[type="checkbox"] {
+				margin-right: 10px;
+			}
+
+			select {
+				margin-top: 5px;
+			}
+
+			button {
+				background: #4286f4;
+				color: #FFF;
+				border-radius: 5px;
+				border: 0px;
+				padding: 5px 10px;
+				outline: none;
+				cursor: pointer;
+				font-size: 14px;
+				margin-top: 15px;
+			}
+
+			#results {
+				margin-top: 20px;
+				background: #EFEFEF;
+			}
+
+
+	</style>
+
+	<title> My Form </title>
+</head>
+
+<body>
+
+
+		<script>
+			function processForm(e) {
+
+				e.preventDefault();
+
+				var resultString = '';
+				var movie_name = document.getElementById("movie_name").value;
+				resultString += "Your favorite movie is " + movie_name;
+
+				var movie_description = document.getElementById("movie_description").value;
+				resultString += "<br><br>This movie is about " + movie_description;
+
+
+
+				if (document.querySelector('input[name="fictional_or_not"]:checked')) {
+				 	var fictional = document.querySelector('input[name="fictional_or_not"]:checked').value
+					resultString += "<br><br>This movie is " + fictional + "."
+				 }
+
+
+
+				var genres = document.querySelectorAll('input[name="genre"]:checked');
+				var genresResult = []
+				for (let i = 0; i < genres.length; i++) {
+					genresResult.push(genres[i].value)
+				}
+				
+				resultString += "<br><br>This movie belongs to these genres: " + genresResult.toString()
+
+				var selector = document.getElementById("rating");
+				var rating = selector.options[selector.selectedIndex].text;
+ 				resultString += "<br><br>This movie is rated " + rating + "."
+
+				var results = document.getElementById("results");
+				results.innerHTML = resultString;
+			}
+
+		</script>
+
+	<h1>What is your favorite movie?</h1>
+	<form> 
+	<label for="movie_name"> Name of Movie </label> <br>
+	<input type="text" id="movie_name" name="movie_name"> 
+
+	<br><br>
+	<label for="movie_description">What is this movie about?</label><br>
+	<textarea id="movie_description" name="movie_description" ></textarea>
+	<br><br>
+
+	Is this movie fictional?<br>
+	<input type="radio" name="fictional_or_not" id="fictional" value="fictional"> 
+	<label for="fictional">Yes</label><br>
+
+	<input type="radio" name="fictional_or_not" id="not_fictional" value="not fictional">
+	<label for="not_fictional">No</label>
+
+	<br> <br> 
+
+	Which genres is this movie?<br>
+	<input type="checkbox" name="genre" value="action" id="action">  		<label for="action">Action</label><br>
+	<input type="checkbox" name="genre" value="adventure" id="adventure">  	<label for="adventure">Adventure</label><br>
+	<input type="checkbox" name="genre" value="comedy" id="comedy">  		<label for="comedy">Comedy</label><br>
+	<input type="checkbox" name="genre" value="drama" id="drama"> 			<label for="drama">Drama</label><br>
+	<input type="checkbox" name="genre" value="family" id="family">  		<label for="family">Family</label><br>
+	<input type="checkbox" name="genre" value="horror" id="horror">  		<label for="horror">Horror</label><br>
+	<input type="checkbox" name="genre" value="sports" id="sports">  		<label for="sports">Sports</label><br>
+	<input type="checkbox" name="genre" value="other" id="other">  			<label for="other">Other</label>
+	<br><br>
+
+	What is this movie rated?</br>
+	<select id="rating">
+		<option value="g">G</option>
+		<option value="pg">PG</option>
+		<option value="pg13">PG-13</option>
+		<option value="r">R</option>
+	</select>
+	<br><br>
+
+	<button onclick="processForm(event)">Submit</button> <br><br>
+
+	</form>
+
+	<div id="results"></div>
+
+</body>
+</html>
