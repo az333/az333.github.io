@@ -32,10 +32,8 @@ body, html {
                 margin-top: 5px;
                 font-size: 16px;
             }
-            textarea {
-              font-family: 'Open Sans';
-              font-size: 16px;
-            }
+
+
 
             input[type="radio"], input[type="checkbox"] {
                 margin-right: 10px;
