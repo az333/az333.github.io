@@ -27,10 +27,14 @@ body, html {
                 border: 1px solid #333;
                 border-radius: 2px;
                 padding: 3px 7px;
-                font-family: 'Courier';
+                font-family: 'Open Sans';
                 width: 400px;
                 margin-top: 5px;
                 font-size: 16px;
+            }
+            textarea {
+              font-family: 'Open Sans';
+              font-size: 16px;
             }
 
             input[type="radio"], input[type="checkbox"] {
