@@ -22,7 +22,7 @@ body, html {
                 border-radius: 5px;
                 padding: 30px;
             }
-    
+
             input[type="text"], textarea {
                 border: 1px solid #333;
                 border-radius: 2px;
@@ -30,6 +30,7 @@ body, html {
                 font-family: 'Open Sans';
                 width: 400px;
                 margin-top: 5px;
+                font-size: 16px;
             }
 
             input[type="radio"], input[type="checkbox"] {
