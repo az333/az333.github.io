@@ -61,7 +61,7 @@
 		for (let i = 0; i < genres.length; i++) {
 			genresResult.push(genres[i].value)
 		}
-				
+
 		resultString += "<br><br>This movie belongs to these genres: " + genresResult.toString()
 
 		var selector = document.getElementById("rating");
@@ -103,13 +103,13 @@
 	</div>
 
 	<h1>What do you need help with?</h1>
-	<form> 
+	<form>
 	<label for="name"> Your Name </label> <br>
-	<input type="text" id="name" name="name"> 
+	<input type="text" id="name" name="name" font="courier">
 
 	<br><br>
 	<label for="contact"> How can we contact you? (discord or email) </label> <br>
-	<input type="text" id="contact" name="contact"> 
+	<input type="text" id="contact" name="contact"  font="courier">
 	<br><br>
 
 	<label for="request">What is your request?</label><br>
@@ -117,17 +117,17 @@
 	<br><br>
 
 	<label for="price"> How much will you be paying? </label>
-	<input type="number" id="price" name="price" min="1"> 
+	<input type="number" id="price" name="price" min="1">
 	<br> <br>
 
 	Will you be paying in empowers?<br>
-	<input type="radio" name="fictional_or_not" id="fictional" value="fictional"> 
+	<input type="radio" name="fictional_or_not" id="fictional" value="fictional">
 	<label for="fictional">Yes</label><br>
 
 	<input type="radio" name="fictional_or_not" id="not_fictional" value="not fictional">
 	<label for="not_fictional">No</label>
 
-	<br> <br> 
+	<br> <br>
 
 	Which genres is this movie?<br>
 	<input type="checkbox" name="genre" value="action" id="action">  		<label for="action">Action</label><br>
@@ -154,7 +154,7 @@
 	</form>
 
 	<div id="results"></div>
-	
+
 
 	<!-- Contact Us -->
 	<div class="w3-content w3-container w3-padding-64 w3-center" id="contact">
