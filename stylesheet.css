@@ -7,6 +7,10 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     vertical-align: baseline;
 }
 
+.center {
+  margin: auto;
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
     display: block;
 }
@@ -506,6 +510,7 @@ h1 .li, h2 .li, h3 .li, p .li {
     font-size: 0.875em;
     line-height: 1.375;
     font-weight: 400;
+    text-align:center;
 }
 
 #text02 br + br {
@@ -520,6 +525,7 @@ h1 .li, h2 .li, h3 .li, p .li {
     font-size: 1em;
     line-height: 1.75;
     font-weight: 200;
+    text-align:center;
 }
 
 #text05 br + br {
@@ -699,6 +705,12 @@ h1 .li, h2 .li, h3 .li, p .li {
     cursor: default;
     padding: 0;
     letter-spacing: 0;
+    height:20px;
+    width:100px;
+    margin: -20px -50px;
+    position:relative;
+    top:50%;
+    left:50%;
 }
 
 .buttons li a {
@@ -2095,6 +2107,7 @@ hr:before {
         width: calc(100% + 0.021875rem);
         font-size: 1em;
         line-height: 1.75;
+        text-align:center;
     }
 
     #text03 {
@@ -3066,10 +3079,12 @@ hr:before {
 
     #text10 {
         font-size: 0.875em;
+        text-align:center;
     }
 
     #text07 {
         font-size: 0.875em;
+        text-align:center;
     }
 
     #text02 {
@@ -3078,10 +3093,12 @@ hr:before {
 
     #text05 {
         font-size: 0.875em;
+        text-align:center;
     }
 
     #text08 {
         font-size: 1em;
+        text-align:center;
     }
 
     #text11 {
