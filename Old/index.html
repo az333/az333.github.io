@@ -1,0 +1,94 @@
+<html>
+<head>
+	<link href="stylesheet.css" rel="stylesheet" type="text/css" media="all">
+	<script src="https://kit.fontawesome.com/968b701bac.js" crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<script>
+	// Change style of navbar on scroll
+	window.onscroll = function() {myFunction()};
+	function myFunction() {
+	    var navbar = document.getElementById("myNavbar");
+	    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+	        navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+	    } else {
+	        navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+	    }
+	}
+
+	// Used to toggle the menu on small screens when clicking on the menu button
+	function toggleFunction() {
+	    var x = document.getElementById("navDemo");
+	    if (x.className.indexOf("w3-show") == -1) {
+	        x.className += " w3-show";
+	    } else {
+	        x.className = x.className.replace(" w3-show", "");
+	    }
+	}
+	</script>
+
+
+	<!-- Navbar \ -->
+	<div class="w3-top">
+	  <div class="w3-bar w3-center" id="myNavbar">
+	    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+	      <i class="fa fa-bars"></i>
+	    </a>
+	    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
+	    <a href="index.html#AvailableWizards" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-hat-wizard"></i> Available Wizards</a>
+	    <a href="MercenaryPrices.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-dollar-sign"></i> Mercenary Prices</a>
+	    <a href="request.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-dollar-sign"></i> Make a Request</a>
+	  </div>
+
+	  <!-- Navbar on small screens -->
+	  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+	    <a href="index.html#AvailableWizards" class="w3-bar-item w3-button" onclick="toggleFunction()">Available Wizards</a>
+	    <a href="MercenaryPrices.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Mercenary Prices</a>
+	    <a href="request.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-dollar-sign"></i> Make a Request</a>
+	  </div>
+	</div>
+
+	<!-- Our Nonexistent Store Name -->
+	<div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+	  <div class="w3-display-middle" style="white-space:nowrap;">
+	    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">WANGEROVICH
+	  </div>
+	</div>
+
+	<!-- Available Wizards -->
+	<div class="w3-content w3-container w3-padding-64" id="AvailableWizards">
+	  <h3 class="w3-center">Available Wizards </h3>
+	  <p class="w3-center"><em>Ovich</em></p>
+	  <p class="w3-center">130 Storm, 130 Balance</p>
+		<p class="w3-center"><em>Cypher</em></p>
+		<p class="w3-center">130 Death, 130 Life</p>
+
+	<!-- Contact Us -->
+	<div class="w3-content w3-container w3-padding-64 w3-center" id="contact">
+	  <h3 class="w3-center">CONTACT US</h3>
+
+
+	  <div class="w3-row w3-padding-32 w3-section w3-center">
+
+	        <i class="fab fa-discord w3-center"></i> Discord: Cypher#8744 <br>
+
+	  </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+	  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+	  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+	</footer>
+</body>
+
+
+
+
+</html>
