@@ -1,1 +1,1 @@
-# Angelica and Stacey's Mercenary Services :)
+# Angelica and Angelica's Mercenary Services :)
