@@ -32,7 +32,6 @@
 	    }
 	}
 
-	// Used to process forms for requests
 	function processForm(e) {
 
 		e.preventDefault();
@@ -56,6 +55,7 @@
 		}
 
 
+
 		var genres = document.querySelectorAll('input[name="genre"]:checked');
 		var genresResult = []
 		for (let i = 0; i < genres.length; i++) {
@@ -72,21 +72,15 @@
 		results.innerHTML = resultString;
 	}
 
-	// Payment method conditional forms
-	function notemps(val){
-		if (val != "emps"){
-			document.getElementById("price").style.display = "none";
-    	document.getElementById("pricelabel").style.display = "none";
-		 	document.getElementById("other").style.display = "block";
-    	document.getElementById("otherlabel").style.display = "block";
-		} else{
-			document.getElementById("other").style.display = "none";
-    	document.getElementById("otherlabel").style.display = "none";
-			document.getElementById("price").style.display = "block";
-    	document.getElementById("pricelabel").style.display = "block";
-
-		}
-}
+	function yesno(){ 
+		console.log('help')
+		 var yes = document.getElementById("yes");
+         document.getElementById("emps").style.display = yes.checked ? "block" : "none";
+         document.getElementById("empslabel").style.display = yes.checked ? "block" : "none";
+         document.getElementById("nonemps").style.display = yes.checked ? "none" : "block";
+         document.getElementById("nonempslabel").style.display = yes.checked ? "none" : "block";
+           
+	}
 
 	</script>
 
@@ -97,16 +91,16 @@
 	    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
 	      <i class="fa fa-bars"></i>
 	    </a>
-	    <a href="index.html" class="w3-bar-item w3-button">HOME</a>
-	    <a href="index.html#AvailableWizards"class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-hat-wizard"></i> Available Wizards</a>
-	    <a href="MercenaryPrices.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-dollar-sign"></i> Mercenary Prices</a>
+	    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+	    <a href="#AvailableWizards" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-hat-wizard"></i> Available Wizards</a>
+	    <a href="MercenaryPrices" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-dollar-sign"></i> Mercenary Prices</a>
 	    <a href="request.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-dollar-sign"></i> Make a Request</a>
 	  </div>
 
 	  <!-- Navbar on small screens -->
 	  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-	    <a href="index.html#AvailableWizards" class="w3-bar-item w3-button" onclick="toggleFunction()">Available Wizards</a>
-	    <a href="MercenaryPrices.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Mercenary Prices</a>
+	    <a href="#AvailableWizards" class="w3-bar-item w3-button" onclick="toggleFunction()">Available Wizards</a>
+	    <a href="MercenaryPrices" class="w3-bar-item w3-button" onclick="toggleFunction()">Mercenary Prices</a>
 	    <a href="request.html" class="w3-bar-item w3-button w3-hide-small"><i class="fas fa-dollar-sign"></i> Make a Request</a>
 	  </div>
 	</div>
@@ -118,7 +112,6 @@
 	  </div>
 	</div>
 
-	<!-- Rquest Forms -->
 	<h1>What do you need help with?</h1>
 	<form>
 	<label for="name"> Your Name </label> <br>
@@ -126,33 +119,47 @@
 
 	<br><br>
 	<label for="contact"> How can we contact you? (Discord or email) </label> <br>
-	<input type="text" id="contact" name="contact" style="font-size: 16px;">
+	<input type="text" id="contact" name="contact">
 	<br><br>
 
 	<label for="request">What is your request?</label><br>
-	<textarea id="request" name="request" style="font-family: 'Open Sans'; font-size: 16px;" placeholder="Please specify the world/dungeon and the number of runs."></textarea>
+	<textarea id="request" name="request" style="font-size: 16px; font-family: 'Open Sans';" placeholder="Please specify the world/dungeon and the number of runs."></textarea>
 	<br><br>
 
+	Will you be paying in empowers?<br>
+	<input type="radio" name="yesorno" id="yes" value="" onclick="yesno()">
+	<label for="yes">Yes</label><br>
 
-	How would you prefer to pay?</br>
-	<select id="payment" onchange="notemps(this.value);">
-			<option value="" disabled selected>Select your option</option>
-			<option value="emps">Empowers</option>
-			<option value="crowns" >Crown Gifts</option>
-			<option value="tc">TC</option>
-			<option value="other">Other</option>
+	<input type="radio" name="yesorno" id="no" value="not" onclick="yesno()">
+	<label for="no">No</label>
+
+	<label for="emps" style="display:none;" id="empslabel"> If yes, indicate how many </label>
+	<input type="number" id="emps" name="emps" min="1" style="display:none;" >
+	<br> 	
+	<label for="nonemps" style="display:none;" id="nonempslabel"> If no, indicate an equivalent payment </label>
+	<input type="text" id="nonemps" name="nonemps" min="1" style="display:none;">
+	<br>
+
+	Which genres is this movie?<br>
+	<input type="checkbox" name="genre" value="action" id="action">  		<label for="action">Action</label><br>
+	<input type="checkbox" name="genre" value="adventure" id="adventure">  	<label for="adventure">Adventure</label><br>
+	<input type="checkbox" name="genre" value="comedy" id="comedy">  		<label for="comedy">Comedy</label><br>
+	<input type="checkbox" name="genre" value="drama" id="drama"> 			<label for="drama">Drama</label><br>
+	<input type="checkbox" name="genre" value="family" id="family">  		<label for="family">Family</label><br>
+	<input type="checkbox" name="genre" value="horror" id="horror">  		<label for="horror">Horror</label><br>
+	<input type="checkbox" name="genre" value="sports" id="sports">  		<label for="sports">Sports</label><br>
+	<input type="checkbox" name="genre" value="other" id="other">  			<label for="other">Other</label>
+	<br><br>
+
+	What is this movie rated?</br>
+	<select id="rating">
+		<option value="g">G</option>
+		<option value="pg">PG</option>
+		<option value="pg13">PG-13</option>
+		<option value="r">R</option>
 	</select>
-	<br>
-	<br>
-	<label for="other" id="otherlabel" style="display:none;"> Please describe your payment method </label>
-	<input type="text" id="other" name="other" style="display:none;">
-	<label for="price" id="pricelabel" style="display:none;"> Please indicate the total number of empowers </label>
-	<input type="number" id="price" name="price" style="display:none;">
+	<br><br>
 
-
-
-
-	<br>
 	<button onclick="processForm(event)">Submit</button> <br><br>
 
 	</form>
@@ -168,7 +175,7 @@
 	  <div class="w3-row w3-padding-32 w3-section w3-center">
 
 	        <i class="fab fa-discord w3-center"></i> Discord: Cypher#8744 <br>
-					<i class="fab fa-discord w3-center"></i> Discord: ovich#5179 <br>
+
 	  </div>
 	</div>
 
@@ -181,33 +188,3 @@
 
 
 </html>
-
-
-<!-- References because we are dumb -->
-
-<!--
-Will you be paying in empowers?<br>
-<input type="radio" name="yesorno" id="yes" value="" onclick="yesno()">
-<label for="yes">Yes</label><br>
-
-<input type="radio" name="yesorno" id="no" value="not" onclick="yesno()">
-<label for="no">No</label>
-
-<label for="emps" style="display:none;" id="empslabel"> If yes, indicate how many </label>
-<input type="number" id="emps" name="emps" min="1" style="display:none;" >
-<br>
-<label for="nonemps" style="display:none;" id="nonempslabel"> If no, indicate an equivalent payment </label>
-<input type="text" id="nonemps" name="nonemps" min="1" style="display:none;">
-<br>
-
-Which genres is this movie?<br>
-<input type="checkbox" name="genre" value="action" id="action">  		<label for="action">Action</label><br>
-<input type="checkbox" name="genre" value="adventure" id="adventure">  	<label for="adventure">Adventure</label><br>
-<input type="checkbox" name="genre" value="comedy" id="comedy">  		<label for="comedy">Comedy</label><br>
-<input type="checkbox" name="genre" value="drama" id="drama"> 			<label for="drama">Drama</label><br>
-<input type="checkbox" name="genre" value="family" id="family">  		<label for="family">Family</label><br>
-<input type="checkbox" name="genre" value="horror" id="horror">  		<label for="horror">Horror</label><br>
-<input type="checkbox" name="genre" value="sports" id="sports">  		<label for="sports">Sports</label><br>
-<input type="checkbox" name="genre" value="other" id="other">  			<label for="other">Other</label>
-<br><br>
--->
